@@ -21,6 +21,6 @@
             echo "Error: " . $sql . "<br>" . $conn->error;
         }
     }
-  //  header('Location: admin.php');     
-   // exit;
+    header('Location: admin.php');
+    exit;
 ?>
