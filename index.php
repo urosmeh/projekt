@@ -10,7 +10,7 @@ include_once "db.php";
             <!-- ################################################################################################ -->
             <article>
                 <div class="overlay inspace-30 btmspace-30">
-                    <h2 class="heading">Pozdravljeni pri Primerjalku</h2>
+                    <h2 class="heading">Pozdravljeni pri Primerjalku!</h2>
                     <p>Veselo nakupovanje!</p>
                 </div>
                 <footer>
