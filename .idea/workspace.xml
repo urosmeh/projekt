@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ebd338ec-793d-4792-93ef-4b54f3b9e4f0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/editProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/editProduct.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/editStore.php" beforeDir="false" afterPath="$PROJECT_DIR$/editStore.php" afterDir="false" />
-    </list>
+    <list default="true" id="ebd338ec-793d-4792-93ef-4b54f3b9e4f0" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,24 +11,24 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/register_post.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/register.php">
+        <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="-60">
+              <caret line="74" column="51" selection-start-line="74" selection-start-column="51" selection-end-line="74" selection-end-column="51" />
             </state>
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/product.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
+        <entry file="file://$PROJECT_DIR$/admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" column="22" lean-forward="true" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+            <state relative-caret-position="219">
+              <caret line="98" column="32" selection-start-line="98" selection-start-column="32" selection-end-line="98" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -54,7 +51,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/editUsers.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-222" />
@@ -97,6 +94,7 @@
       <find>file_get_html</find>
       <find>editP</find>
       <find>trgovko</find>
+      <find>product.php</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -177,22 +175,21 @@
       <option name="presentableId" value="Default" />
       <updated>1558283311939</updated>
       <workItem from="1558283313089" duration="5242000" />
-      <workItem from="1558291437112" duration="2196000" />
+      <workItem from="1558291437112" duration="3055000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7438000" />
+    <option name="totallyTimeSpent" value="8297000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25302014" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -300,9 +297,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/favorites.php" />
-    <entry file="file://$PROJECT_DIR$/admin.php" />
     <entry file="file://$PROJECT_DIR$/orderByResults.php" />
-    <entry file="file://$PROJECT_DIR$/product.php" />
     <entry file="file://$PROJECT_DIR$/results.php" />
     <entry file="file://$PROJECT_DIR$/Slike/icon3.png">
       <provider selected="true" editor-type-id="images" />
@@ -340,13 +335,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="22" lean-forward="true" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/editProduct.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
@@ -365,6 +353,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-222" />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="98" column="32" selection-start-line="98" selection-start-column="32" selection-end-line="98" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-60">
+          <caret line="74" column="51" selection-start-line="74" selection-start-column="51" selection-end-line="74" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/product.php">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
