@@ -19,8 +19,8 @@ if (isset($_POST['reg_user'])&&(
         $password = mysqli_real_escape_string($conn, $_POST['password']);
         $hash = hash('sha512', $password);
 
-        $query = "INSERT INTO users (name, lastname, email, password) 
-                VALUES('$name', '$lastname', '$email', '$hash')";
+        $query = "INSERT INTO users (Name, LastName, Email, Password, Admin) 
+                VALUES('$name', '$lastname', '$email', '$hash', 0)";
         mysqli_query($conn, $query);
 
         header('Location: login.php');
