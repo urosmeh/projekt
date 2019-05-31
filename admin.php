@@ -9,7 +9,6 @@ echo "<a href='mlacom.php'> Mlacom Scraper </a>||";
 echo "<a href='markosoftscrap.php'> Markosoftscrap Scraper </a>||<br>";
 echo "<a href='similarTitle.php'> Primerjaj nazive izdelkov </a>";
 echo "<h1>Uporabniki</h1>";
-echo "<h1>Uporabniki</h1>";
 if(isset($_SESSION['Name']) && isset($_SESSION['Surname'])&& $_SESSION['Admin']==1)
 {
 $sql = "SELECT * FROM Users";
