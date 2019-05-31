@@ -129,6 +129,24 @@ CREATE TABLE IF NOT EXISTS `Primerjalko`.`Products_has_Filters` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
+CREATE TABLE IF NOT EXISTS `Primerjalko`.`SimilarProducts` (
+  `ID` INT NOT NULL AUTO_INCREMENT,
+  `Text` DOUBLE NULL,
+  `Description` DOUBLE NULL,
+  `Picture` DOUBLE NULL,
+  `Products_ID` INT NOT NULL,
+  `SimilarProduct_ID` INT NOT NULL,
+  PRIMARY KEY (`ID`),
+  UNIQUE INDEX `ID_UNIQUE` (`ID` ASC),
+  INDEX `fk_SimilarProducts_Products1_idx` (`Products_ID` ASC),
+  CONSTRAINT `fk_SimilarProducts_Products1`
+    FOREIGN KEY (`Products_ID`)
+    REFERENCES `Primerjalko`.`Products` (`ID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
