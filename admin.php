@@ -5,7 +5,8 @@ include_once "session.php";
 ?>
 <?php 
 echo "<a href='scraper_bigbang.php'> BigBang Scraper </a>";
-
+echo "<a href='mlacom.php'> Mlacom Scraper </a>";
+echo "<a href='markosoftscrap.php'> Markosoftscrap Scraper </a>";
 echo "<h1>Uporabniki</h1>";
 if(isset($_SESSION['Name']) && isset($_SESSION['Surname'])&& $_SESSION['Admin']==1)
 {
