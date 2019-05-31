@@ -72,11 +72,6 @@
                 }
 
             }
-            
-            function insert()
-            {
-                
-            }
 
             
             function printOut ($imeTemp, $cenaTemp, $imgTemp, $opisTemp , $linkTemp){
