@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ebd338ec-793d-4792-93ef-4b54f3b9e4f0" name="Default Changelist" comment="similartitle">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product.php" beforeDir="false" afterPath="$PROJECT_DIR$/product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,8 +33,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/product.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1105">
-              <caret line="104" column="185" selection-start-line="104" selection-start-column="185" selection-end-line="104" selection-end-column="185" />
+            <state relative-caret-position="503">
+              <caret line="109" column="75" selection-start-line="109" selection-start-column="75" selection-end-line="109" selection-end-column="75" />
             </state>
           </provider>
         </entry>
@@ -221,12 +218,12 @@
       <workItem from="1558430559332" duration="297000" />
       <workItem from="1559291621621" duration="3366000" />
       <workItem from="1559299118406" duration="2285000" />
-      <workItem from="1559389543268" duration="10926000" />
+      <workItem from="1559389543268" duration="12557000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25617000" />
+    <option name="totallyTimeSpent" value="27248000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -475,8 +472,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/product.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1105">
-          <caret line="104" column="185" selection-start-line="104" selection-start-column="185" selection-end-line="104" selection-end-column="185" />
+        <state relative-caret-position="503">
+          <caret line="109" column="75" selection-start-line="109" selection-start-column="75" selection-end-line="109" selection-end-column="75" />
         </state>
       </provider>
     </entry>

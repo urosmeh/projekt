@@ -78,7 +78,7 @@ include_once "db.php";
              */
 
             //LIMIT koliko naj se jih prikaže na strani
-            $sql6 = "SELECT * FROM products p INNER JOIN similarproducts s ON s.Products_ID=p.ID WHERE p.ID=$idIzbran ORDER BY s.Text limit 6";
+            $sql6 = "SELECT * FROM products p INNER JOIN similarproducts s ON s.Products_ID=p.ID WHERE s.Products_ID=$idIzbran ORDER BY s.Text limit 6";
             $result6 = $conn->query($sql6);
 
             echo "<h3>Podobni izdelki</h3>";
@@ -92,18 +92,22 @@ include_once "db.php";
 
                     $ct++;
 
-                    $id6 = $row6["ID"];
+                    $id6 = $row6["SimilarProduct_ID"];
                     $sqlPicture6 = "SELECT * FROM Pictures WHERE Products_ID=$id6 LIMIT 1";
                     $resultPicture6 = $conn->query($sqlPicture6);
                     $rowPicture6 = $resultPicture6->fetch_assoc();
+
+                    $sqlPrdoduct6 = "SELECT * FROM Products WHERE ID=$id6 LIMIT 1";
+                    $resultProduct6 = $conn->query($sqlPrdoduct6);
+                    $rowProduct6 = $resultProduct6->fetch_assoc();
 
                     ?>
                     <div class="one_third <?= $first == true ? "first" : ""; ?> btmspace-30">
                         <div class="block inspace-30 borderedbox">
                             <h6 class="font-x1">
                                 <?php
-                                echo "<a href='product.php?id=$id6'>".$row6['Title']."</a><br>"; if(isset($rowPicture6['url'])){echo "<img src=".$rowPicture6['url']." alt=".$rowPicture6['Title']. "height=0 width=0>";} else{echo  "<img src='../Primerjalko/Slike/icon3.png'>";}
-                                echo "<br> Najceneje: " ."<h5><b>". $row6["Price"]."€</b></h5>" . " </article> </li>"; //za oceno še zrovn pa sliko po možnosti
+                                echo "<a href='product.php?id=$id6'>".$rowProduct6['Title']."</a><br>"; if(isset($rowPicture6['url'])){echo "<img src=".$rowPicture6['url']." alt=".$rowPicture6['Title']. "height=0 width=0>";} else{echo  "<img src='../Primerjalko/Slike/icon3.png'>";}
+                                echo "<br> Cena: " ."<h5><b>". $rowProduct6["Price"]."€</b></h5>" . " </article> </li>";
                                 ?>
                             </h6>
                         </div>
