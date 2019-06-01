@@ -2,7 +2,10 @@
 include "header.php"; 
 ?>
 
-    <div  class="login" ">
+    <div  class="login"  style="
+  margin: auto;
+  width: 20%;
+  padding: 10px;">
         <form action="register_post.php" method="POST">
                 <label for="ime">Ime:</label>
                 <input type="text" name="name" class="form-control" id="name" aria-describedby="name" placeholder="Ime">
