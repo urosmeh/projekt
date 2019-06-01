@@ -12,7 +12,7 @@ if(isset($_SESSION['Name']) && isset($_SESSION['Surname'])&& $_SESSION['Admin']=
     echo "<td><a href='scraper_bigbang.php'> BigBang Scraper </a></td>";
     echo "<td><a href='mlacom.php'> Mlacom Scraper </a></td>";
     echo "<td><a href='markosoftscrap.php'> Markosoft Scraper </a></td>";
-    echo "<td><a href='scraper_primerjalko.php'> Pričaraj Scraper </a></td>";
+    echo "<td><a href='scraper_pricaraj.php'> Pričaraj Scraper </a></td>";
 
     echo"</tr><tr>";
 
