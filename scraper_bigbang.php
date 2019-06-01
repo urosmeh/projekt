@@ -21,7 +21,7 @@ else
     $store_id = $row['ID'];
 }
 
-/*for ($i = 1; $i < 40; $i++)
+for ($i = 1; $i < 40; $i++)
 {
     $html = file_get_html('https://www.bigbang.si/prenosni-racunalniki?pricefrom=190&priceto=4000&pagenumber=' . $i);
     $konec = explode('Ni artiklov, ki bi ustrezali izbranim kriterijem', $html);
@@ -60,7 +60,7 @@ else
         $query = mysqli_query($conn, "INSERT INTO products(Title, ProductURL, Price, DateTime, Description,Rating, Stores_ID, Categories_ID) VALUES('$title', '$linkDesc', $priceNew, '$date', '$description', 0, $store_id, (SELECT ID FROM categories WHERE Title = 'Prenosniki'))");
         $query2 = mysqli_query($conn, "INSERT INTO pictures(url, Title, Products_ID) VALUES('$img', '$title', (SELECT ID FROM products WHERE ProductURL = '$linkDesc'))");
     }
-}*/
+}
 
 for ($i = 1; $i < 40; $i++)
 {
@@ -91,15 +91,21 @@ for ($i = 1; $i < 40; $i++)
             $priceNew = $price1[1];
         }
 
+        /*
+         *$image = $element->find('center img', 0)->src;
+        $image1 = str_replace("crop2/", "", $image);
+        $img = $link . $image1;
+         */
+
         $priceNew = str_replace(",", ".", $priceNew);
         $item[] = $linkDesc; //url
         $item[] = $htmlDesc->find('div.mainImage a img', 0)->src;
         $img = $htmlDesc->find('div.mainImage a img', 0)->src;
-        echo $img . "<br>";
+        //echo $img . "<br>";
         $date = date("Y-m-d H:i:s");
         $query = mysqli_query($conn, "INSERT INTO Products(Title, ProductURL, Price, DateTime, Description,Rating, Stores_ID, Categories_ID) VALUES('$title', '$linkDesc', $priceNew, '$date', '$description', 0, $store_id, (SELECT ID FROM categories WHERE Title = 'Namizni PC'))");
         //INSERT INTO `pictures`(`url`, `Title`, `Products_ID`) VALUES ('what', 'idk', 626)
-        $query2 = mysqli_query($conn, "INSERT INTO pictures(url, Title, Products_ID) VALUES ('why', 'sdf', 1038)");
+        $query2 = mysqli_query($conn, "INSERT INTO pictures(url, Title, Products_ID) VALUES ('$img', '$title', (SELECT ID FROM products WHERE ProductURL = '$linkDesc'))");
         //$query2 = mysqli_query($conn, "INSERT INTO pictures(url, Title, Products_ID) VALUES('$img', '$title', (SELECT ID FROM products WHERE ProductURL = '$linkInsert'))");
     }
 }
