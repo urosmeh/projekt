@@ -6,10 +6,20 @@ include_once "session.php";
 <?php
 
 if(isset($_SESSION['Name']) && isset($_SESSION['Surname'])&& $_SESSION['Admin']==1) {
-    echo "<a href='scraper_bigbang.php'> BigBang Scraper </a>||";
-    echo "<a href='mlacom.php'> Mlacom Scraper </a>||";
-    echo "<a href='markosoftscrap.php'> Markosoftscrap Scraper </a>||<br>";
-    echo "<a href='similarTitle.php'> Primerjaj nazive izdelkov </a>";
+    echo "<table border='1'>";
+    echo "<tr>";
+
+    echo "<td><a href='scraper_bigbang.php'> BigBang Scraper </a></td>";
+    echo "<td><a href='mlacom.php'> Mlacom Scraper </a></td>";
+    echo "<td><a href='markosoftscrap.php'> Markosoftscrap Scraper </a></td>";
+
+    echo"</tr><tr>";
+
+    echo "<td><a href='similarTitle.php'> Primerjaj nazive izdelkov </a></td>";
+    echo "<td><a href='similarDescription.php'> Primerjaj opis izdelkov </a></td>";
+
+    echo "</tr>";
+    echo "</table>";
 }
 echo "<h1>Uporabniki</h1>";
 if(isset($_SESSION['Name']) && isset($_SESSION['Surname'])&& $_SESSION['Admin']==1)
