@@ -14,7 +14,10 @@ if(isset($_SESSION['Success']))
 ?>
 
 
-<div class="login">
+<div class="login" style="
+  margin: auto;
+  width: 20%;
+  padding: 10px;">
     <form action="login_post.php" method="POST">
             <label for="exampleInputEmail1">Email:</label>
             <input type="email" name="email"  id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Vnesite email:">
