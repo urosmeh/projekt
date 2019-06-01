@@ -28,7 +28,7 @@ class LocalBinaryPatterns:
 
 
 
-onlyfiles = [f for f in listdir("./img/") if isfile(join("./img", f))]
+onlyfiles = [f for f in listdir("./SaveImgToLocal/") if isfile(join("./SaveImgToLocal/", f))]
 print(onlyfiles)
 
 desc = LocalBinaryPatterns(253, 8)
@@ -36,15 +36,23 @@ data = [] #LBP histogram
 labels = [] #imena datotek
 HOGs = [] #HOG vrednosti
 for imagePath in onlyfiles:
-    print("./img/"+imagePath)
-    image = cv2.imread("./img/"+imagePath)
-    gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-    hist = desc.describe(gray)
-    H = feature.hog(image, orientations=9, pixels_per_cell=(8, 8), cells_per_block=(2, 2), transform_sqrt=True)
-    HOGs.append(H)
-    labels.append(imagePath)
-    data.append(hist)
+    ext=imagePath.split(".")
+    if(ext[1] == "jpg" or ext[1] == "png" or ext[1] == "bmp" or ext[1] == "jpeg" or ext[1] == "JPG"):
+        print("./SaveImgToLocal/" + imagePath)
+        image = cv2.imread("./SaveImgToLocal/" + imagePath)
+        image = np.float32(image)
+        gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+        gray = np.float32(gray)
+        hist = desc.describe(gray)
+        H = feature.hog(image, orientations=9, pixels_per_cell=(8, 8), cells_per_block=(2, 2), transform_sqrt=True)
+        HOGs.append(H)
+        labels.append(imagePath)
+        data.append(hist)
+    else:
+        continue
 
+prviDrugi = cv2.compareHist(np.float32(data[0]), np.float32(data[1]), cv2.HISTCMP_BHATTACHARYYA)
+print(prviDrugi)
 
 i = 0
 j = 0
