@@ -16,8 +16,19 @@ if ($result->num_rows > 0) {
                     //echo "similarity: ($perc %)<br>";
                     $id = $row['ID'];
                     $id2 = $row2['ID'];
-                    $query = "INSERT INTO similarproducts(Text, Products_ID, SimilarProduct_ID) VALUES ($perc, $id, $id2)";
-                    mysqli_query($conn, $query);
+
+                    $query = "SELECT * from similarproducts where Products_ID=$id AND SimilarProduct_ID=$id2";
+                    $resultObstaja = $conn->query($query);
+                    if($resultObstaja->num_rows > 0)
+                    {
+                        $query = "UPDATE similarproducts SET Text=$perc WHERE Products_ID=$id AND SimilarProduct_ID=$id2";
+                        mysqli_query($conn, $query);
+                    }
+                    else
+                    {
+                        $query = "INSERT INTO similarproducts(Text, Products_ID, SimilarProduct_ID) VALUES ($perc, $id, $id2)";
+                        mysqli_query($conn, $query);
+                    }
                 }
             }
         }

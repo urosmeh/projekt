@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ebd338ec-793d-4792-93ef-4b54f3b9e4f0" name="Default Changelist" comment="similartitle">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PodatkovnaBaza.sql" beforeDir="false" afterPath="$PROJECT_DIR$/PodatkovnaBaza.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/similarTitle.php" beforeDir="false" afterPath="$PROJECT_DIR$/similarTitle.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,8 +43,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/similarTitle.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="17" column="32" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="32" />
+            <state relative-caret-position="308">
+              <caret line="23" column="93" lean-forward="true" selection-start-line="23" selection-start-column="93" selection-end-line="23" selection-end-column="93" />
             </state>
           </provider>
         </entry>
@@ -198,12 +196,12 @@
       <workItem from="1558430559332" duration="297000" />
       <workItem from="1559291621621" duration="3366000" />
       <workItem from="1559299118406" duration="2285000" />
-      <workItem from="1559389543268" duration="2406000" />
+      <workItem from="1559389543268" duration="4118000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17097000" />
+    <option name="totallyTimeSpent" value="18809000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -428,8 +426,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/similarTitle.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="32" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="32" />
+        <state relative-caret-position="308">
+          <caret line="23" column="93" lean-forward="true" selection-start-line="23" selection-start-column="93" selection-end-line="23" selection-end-column="93" />
         </state>
       </provider>
     </entry>
