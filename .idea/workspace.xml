@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ebd338ec-793d-4792-93ef-4b54f3b9e4f0" name="Default Changelist" comment="similartitle">
-      <change beforePath="$PROJECT_DIR$/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PodatkovnaBaza.sql" beforeDir="false" afterPath="$PROJECT_DIR$/PodatkovnaBaza.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/similarTitle.php" beforeDir="false" afterPath="$PROJECT_DIR$/similarTitle.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,8 +36,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="688">
-              <caret line="119" column="1" lean-forward="true" selection-start-line="99" selection-end-line="119" selection-end-column="1" />
+            <state relative-caret-position="2618">
+              <caret line="119" column="1" selection-start-line="99" selection-end-line="119" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -43,8 +45,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/similarTitle.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="10" column="90" selection-start-line="10" selection-start-column="89" selection-end-line="10" selection-end-column="90" />
+            <state relative-caret-position="374">
+              <caret line="17" column="32" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -62,7 +64,7 @@
         <entry file="file://$PROJECT_DIR$/register_post.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="572">
-              <caret line="26" column="13" lean-forward="true" selection-start-line="21" selection-start-column="7" selection-end-line="26" selection-end-column="13" />
+              <caret line="26" column="13" selection-start-line="21" selection-start-column="7" selection-end-line="26" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -99,6 +101,7 @@
       <find>editP</find>
       <find>trgovko</find>
       <find>product.php</find>
+      <find>$result2</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -130,6 +133,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -146,7 +150,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -194,18 +197,19 @@
       <workItem from="1558379883448" duration="305000" />
       <workItem from="1558430559332" duration="297000" />
       <workItem from="1559291621621" duration="3366000" />
-      <workItem from="1559299118406" duration="2091000" />
+      <workItem from="1559299118406" duration="2285000" />
+      <workItem from="1559389543268" duration="2406000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14497000" />
+    <option name="totallyTimeSpent" value="17097000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23892617" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24228188" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -374,8 +378,36 @@
     <entry file="file://$PROJECT_DIR$/results2.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/mlacom.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="24" column="47" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/markosoftscrap.php">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2618">
+          <caret line="119" column="1" selection-start-line="99" selection-end-line="119" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/register_post.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="26" column="13" selection-start-line="21" selection-start-column="7" selection-end-line="26" selection-end-column="13" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/simple_html_dom.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -394,38 +426,10 @@
     <entry file="file://$PROJECT_DIR$/PodatkovnaBaza.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/mlacom.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="24" column="47" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="688">
-          <caret line="119" column="1" lean-forward="true" selection-start-line="99" selection-end-line="119" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/register_post.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="26" column="13" lean-forward="true" selection-start-line="21" selection-start-column="7" selection-end-line="26" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/similarTitle.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="90" selection-start-line="10" selection-start-column="89" selection-end-line="10" selection-end-column="90" />
+        <state relative-caret-position="374">
+          <caret line="17" column="32" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="32" />
         </state>
       </provider>
     </entry>

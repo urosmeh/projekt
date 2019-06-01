@@ -145,7 +145,8 @@ CREATE TABLE IF NOT EXISTS `Primerjalko`.`SimilarProducts` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
-
+ALTER TABLE Primerjalko.SimilarProducts
+  ADD CONSTRAINT uq_SimilarProducts UNIQUE(Products_ID, SimilarProduct_ID);
 
 
 SET SQL_MODE=@OLD_SQL_MODE;
