@@ -23,8 +23,9 @@ include_once "db.php";
 
     // Echo page content
     echo $row['Title'];
-    
+
     $id = $row["ID"];
+    $idIzbran = $row["ID"];
     $query = mysqli_query($conn, "SELECT * FROM favorites WHERE Products_ID='$id' LIMIT 1");
     
     if (!$query)
@@ -62,6 +63,67 @@ include_once "db.php";
     
        ?>
     </div>
+
+
+<div class="wrapper row3">
+    <main class="hoc container clear">
+        <!-- main body -->
+        <!-- ################################################################################################ -->
+        <ul class="nospace group center">
+
+            <?php
+            /* pobrati podatke iz baze ter jih izpisati tukaj v div.
+             * vsak izdelek v svojem divu, div poleg diva, 3-4 izdelki v vrsti MAX
+             * začnemo z najpopularnejšimi nato vedno manj.
+             */
+
+            //LIMIT koliko naj se jih prikaže na strani
+            $sql6 = "SELECT * FROM products p INNER JOIN similarproducts s ON s.Products_ID=p.ID WHERE p.ID=$idIzbran ORDER BY s.Text limit 6";
+            $result6 = $conn->query($sql6);
+
+            echo "<h3>Podobni izdelki</h3>";
+
+            if ($result6->num_rows > 0) {
+                // output data of each row
+
+                $first = true;
+                $ct = 0;
+                while ($row6 = $result6->fetch_assoc()) {
+
+                    $ct++;
+
+                    $id6 = $row6["ID"];
+                    $sqlPicture6 = "SELECT * FROM Pictures WHERE Products_ID=$id6 LIMIT 1";
+                    $resultPicture6 = $conn->query($sqlPicture6);
+                    $rowPicture6 = $resultPicture6->fetch_assoc();
+
+                    ?>
+                    <div class="one_third <?= $first == true ? "first" : ""; ?> btmspace-30">
+                        <div class="block inspace-30 borderedbox">
+                            <h6 class="font-x1">
+                                <?php
+                                echo "<a href='product.php?id=$id6'>".$row6['Title']."</a><br>"; if(isset($rowPicture6['url'])){echo "<img src=".$rowPicture6['url']." alt=".$rowPicture6['Title']. "height=0 width=0>";} else{echo  "<img src='../Primerjalko/Slike/icon3.png'>";}
+                                echo "<br> Najceneje: " ."<h5><b>". $row6["Price"]."€</b></h5>" . " </article> </li>"; //za oceno še zrovn pa sliko po možnosti
+                                ?>
+                            </h6>
+                        </div>
+                    </div>
+                    <?php
+                    $first = ($ct % 3 == 0) ? true : false;
+
+                }
+
+            } else {
+                echo "Ni podobnih izdelkov";
+            }
+            ?>
+        </ul>
+        <!-- ################################################################################################ -->
+        <!-- / main body -->
+        <div class="clear"></div>
+    </main>
+</div>
+
 
 </article> </li>
 </ul>
