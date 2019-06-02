@@ -10,8 +10,8 @@ $store_id = 0;
 
 if(mysqli_num_rows($query) == 0)
 {
-    $query1 = mysqli_query($conn, "INSERT into stores(Name, StoreURL) VALUES('BigBang', 'https://www.bigbang.si')");
-    $query = mysqli_query($conn, "SELECT ID, StoreURL FROM stores WHERE StoreURL = https://www.bigbang.si");
+    $query1 = mysqli_query($conn, "INSERT into Stores(Name, StoreURL) VALUES('BigBang', 'https://www.bigbang.si')");
+    $query = mysqli_query($conn, "SELECT ID, StoreURL FROM Stores WHERE StoreURL = https://www.bigbang.si");
     $row = mysqli_fetch_assoc($query);
     $store_id = $row['ID'];
 }
@@ -57,8 +57,8 @@ for ($i = 1; $i < 40; $i++)
         $img = $htmlDesc->find('div.mainImage a img', 0)->src;
 
         $date = date("Y-m-d H:i:s");
-        $query = mysqli_query($conn, "INSERT INTO products(Title, ProductURL, Price, DateTime, Description,Rating, Stores_ID, Categories_ID) VALUES('$title', '$linkDesc', $priceNew, '$date', '$description', 0, $store_id, (SELECT ID FROM categories WHERE Title = 'Prenosniki'))");
-        $query2 = mysqli_query($conn, "INSERT INTO pictures(url, Title, Products_ID) VALUES('$img', '$title', (SELECT ID FROM products WHERE ProductURL = '$linkDesc'))");
+        $query = mysqli_query($conn, "INSERT INTO Products(Title, ProductURL, Price, DateTime, Description,Rating, Stores_ID, Categories_ID) VALUES('$title', '$linkDesc', $priceNew, '$date', '$description', 0, $store_id, (SELECT ID FROM Categories WHERE Title = 'Prenosniki'))");
+        $query2 = mysqli_query($conn, "INSERT INTO Pictures(url, Title, Products_ID) VALUES('$img', '$title', (SELECT ID FROM Products WHERE ProductURL = '$linkDesc'))");
     }
 }
 
@@ -103,9 +103,9 @@ for ($i = 1; $i < 40; $i++)
         $img = $htmlDesc->find('div.mainImage a img', 0)->src;
         //echo $img . "<br>";
         $date = date("Y-m-d H:i:s");
-        $query = mysqli_query($conn, "INSERT INTO Products(Title, ProductURL, Price, DateTime, Description,Rating, Stores_ID, Categories_ID) VALUES('$title', '$linkDesc', $priceNew, '$date', '$description', 0, $store_id, (SELECT ID FROM categories WHERE Title = 'Namizni PC'))");
+        $query = mysqli_query($conn, "INSERT INTO Products(Title, ProductURL, Price, DateTime, Description,Rating, Stores_ID, Categories_ID) VALUES('$title', '$linkDesc', $priceNew, '$date', '$description', 0, $store_id, (SELECT ID FROM Categories WHERE Title = 'Namizni PC'))");
         //INSERT INTO `pictures`(`url`, `Title`, `Products_ID`) VALUES ('what', 'idk', 626)
-        $query2 = mysqli_query($conn, "INSERT INTO pictures(url, Title, Products_ID) VALUES ('$img', '$title', (SELECT ID FROM products WHERE ProductURL = '$linkDesc'))");
+        $query2 = mysqli_query($conn, "INSERT INTO Pictures(url, Title, Products_ID) VALUES ('$img', '$title', (SELECT ID FROM Products WHERE ProductURL = '$linkDesc'))");
         //$query2 = mysqli_query($conn, "INSERT INTO pictures(url, Title, Products_ID) VALUES('$img', '$title', (SELECT ID FROM products WHERE ProductURL = '$linkInsert'))");
     }
 }
