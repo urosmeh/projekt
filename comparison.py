@@ -1,3 +1,5 @@
+#! python
+
 import numpy as np
 import os
 from os import listdir
@@ -7,6 +9,7 @@ from skimage import exposure
 from skimage import feature
 import cv2
 import pymysql
+import math
 conn = pymysql.connect(host='localhost', user='root', password='', db='Primerjalko')
 db = conn.cursor()
 
@@ -19,21 +22,15 @@ class LocalBinaryPatterns:
         lbp = feature.local_binary_pattern(image, self.numPoints,
                                            self.radius, method="uniform")
         (hist, _) = np.histogram(lbp.ravel(), bins=np.arange(0, 256), range=(0, 256))
-
         hist = hist.astype("float")
-        # hist /= (hist.sum() + eps)
         cv2.normalize(hist, hist, alpha=0, beta=1, norm_type=cv2.NORM_MINMAX)
         return hist
 
 
 my_path = os.path.abspath(os.path.dirname(__file__))
-print(my_path)
 path = os.path.join(my_path, "/saveImgToLocal/")
 path = my_path + '\saveImgToLocal\\'
-print(path)
-
 onlyfiles = [f for f in listdir(path) if isfile(join(path, f))]
-print(onlyfiles)
 
 desc = LocalBinaryPatterns(253, 8)
 data = []  # LBP histogram
@@ -57,19 +54,17 @@ for imagePath in onlyfiles:
 
 i = 0
 j = 1
-
-
-
 while i < len(data):
     ime = labels[i]
     set = data[i]
+    hog1 = HOGs[i]
     while j < len(data):
         ime2 = labels[j]
         set2 = data[j]
+        hog2 = HOGs[j]
         eqRate = cv2.compareHist(np.float32(set), np.float32(set2), cv2.HISTCMP_BHATTACHARYYA)
         if eqRate < 0.15:
             sql = "INSERT INTO similarproducts(Text, Products_ID, SimilarProduct_ID) VALUES ((%d), (%s), (%s))"%(eqRate, ime, ime2)
-            print(sql)
             retVal = db.execute(sql)
             conn.commit()
             if retVal != 1:
@@ -78,6 +73,24 @@ while i < len(data):
                 print("Sucess")
         else:
             print("not enough similiarity")
+        k=0
+        suma=0
+        while k < len(hog1):
+            loc = hog2[k]-hog1[k]
+            loc = pow(loc, 2)
+            suma = suma + math.sqrt(loc)
+            k=k+1
+        if suma < 120:
+            sql = "INSERT INTO similarproducts(Description, Products_ID, SimilarProduct_ID) VALUES ((%d), (%s), (%s))" % (
+            suma, ime, ime2)
+            retVal = db.execute(sql)
+            conn.commit()
+            if retVal != 1:
+                print("Failed Insert")
+            else:
+                print("Sucess")
+        else:
+            print("HOGs are too far apart")
         j = j + 1
     i = i + 1
 conn.close()
