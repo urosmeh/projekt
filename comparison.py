@@ -64,7 +64,7 @@ while i < len(data):
         hog2 = HOGs[j]
         eqRate = cv2.compareHist(np.float32(set), np.float32(set2), cv2.HISTCMP_BHATTACHARYYA)
         if eqRate < 0.15:
-            sql = "INSERT INTO similarproducts(Text, Products_ID, SimilarProduct_ID) VALUES ((%d), (%s), (%s))"%(eqRate, ime, ime2)
+            sql = "INSERT INTO similarproducts(HistCmp, Products_ID, SimilarProduct_ID) VALUES ((%d), (%s), (%s))"%(eqRate, ime, ime2)
             retVal = db.execute(sql)
             conn.commit()
             if retVal != 1:
@@ -81,7 +81,7 @@ while i < len(data):
             suma = suma + math.sqrt(loc)
             k=k+1
         if suma < 120:
-            sql = "INSERT INTO similarproducts(Description, Products_ID, SimilarProduct_ID) VALUES ((%d), (%s), (%s))" % (
+            sql = "INSERT INTO similarproducts(HOGdist, Products_ID, SimilarProduct_ID) VALUES ((%d), (%s), (%s))" % (
             suma, ime, ime2)
             retVal = db.execute(sql)
             conn.commit()
