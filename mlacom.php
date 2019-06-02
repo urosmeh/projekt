@@ -54,8 +54,8 @@ for ($i = 1; $i < 40; $i++) {
         $img = $link . $image1;
         
         $date = date("Y-m-d H:i:s");
-        $query = mysqli_query($conn, "INSERT INTO Products(Title, ProductURL, Price, DateTime, Description,Rating, Stores_ID, Categories_ID) VALUES('$title', '$linkInsert', $price, '$date', '$description', 0, $store_id, (SELECT ID FROM categories WHERE Title = 'Prenosniki'))");
-        $query2 = mysqli_query($conn, "INSERT INTO pictures(url, Title, Products_ID) VALUES('$img', '$title', (SELECT ID FROM products WHERE ProductURL = '$linkInsert'))");
+        $query = mysqli_query($conn, "INSERT INTO Products(Title, ProductURL, Price, DateTime, Description,Rating, Stores_ID, Categories_ID) VALUES('$title', '$linkInsert', $price, '$date', '$description', 0, $store_id, (SELECT ID FROM Categories WHERE Title = 'Prenosniki'))");
+        $query2 = mysqli_query($conn, "INSERT INTO Pictures(url, Title, Products_ID) VALUES('$img', '$title', (SELECT ID FROM Products WHERE ProductURL = '$linkInsert'))");
         
     }
 }
