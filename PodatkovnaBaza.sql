@@ -131,9 +131,10 @@ ENGINE = InnoDB;
 
 CREATE TABLE IF NOT EXISTS `Primerjalko`.`SimilarProducts` (
   `ID` INT NOT NULL AUTO_INCREMENT,
-  `Text` DOUBLE NULL,
+  `TitleCMP` DOUBLE NULL,
   `Description` DOUBLE NULL,
-  `Picture` DOUBLE NULL,
+  `HistCmp` DOUBLE NULL,
+  `HOGdist` DOUBLE NULL,
   `Products_ID` INT NOT NULL,
   `SimilarProduct_ID` INT NOT NULL,
   PRIMARY KEY (`ID`),
