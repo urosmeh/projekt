@@ -21,12 +21,12 @@ if ($result->num_rows > 0) {
                     $resultObstaja = $conn->query($query);
                     if($resultObstaja->num_rows > 0)
                     {
-                        $query = "UPDATE similarproducts SET Text=$perc WHERE Products_ID=$id AND SimilarProduct_ID=$id2";
+                        $query = "UPDATE similarproducts SET TitleCMP=$perc WHERE Products_ID=$id AND SimilarProduct_ID=$id2";
                         mysqli_query($conn, $query);
                     }
                     else
                     {
-                        $query = "INSERT INTO similarproducts(Text, Products_ID, SimilarProduct_ID) VALUES ($perc, $id, $id2)";
+                        $query = "INSERT INTO similarproducts(TitleCMP, Products_ID, SimilarProduct_ID) VALUES ($perc, $id, $id2)";
                         mysqli_query($conn, $query);
                     }
                 }
