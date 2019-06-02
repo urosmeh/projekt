@@ -78,7 +78,7 @@ include_once "db.php";
              */
 
             //LIMIT koliko naj se jih prikaže na strani
-            $sql6 = "SELECT * FROM products p INNER JOIN similarproducts s ON s.Products_ID=p.ID WHERE s.Products_ID=$idIzbran ORDER BY s.Text limit 6";
+            $sql6 = "SELECT * FROM products p INNER JOIN similarproducts s ON s.Products_ID=p.ID WHERE s.Products_ID=$idIzbran ORDER BY HistCmp DESC limit 6";
             $result6 = $conn->query($sql6);
 
             echo "<h3>Podobni izdelki</h3>";
