@@ -14,8 +14,8 @@ data = db.fetchall();
 for row in data:
     #print(row[0])
     imgurl = row[0]
-    #sqlImgId = "select ID from pictures where url=%s, "
-    db.execute("select ID from pictures where url = (%s)", imgurl)
+    #sqlImgId = "select ID from Pictures where url=%s, "
+    db.execute("select ID from Pictures where url = (%s)", imgurl)
     id = db.fetchall()
     filename = (id[0][0])
     #print(filename)
