@@ -53,7 +53,7 @@ include_once "db.php";
                             //exec('echo '. round($row["Price"]).' > cena.txt');
                             //exec('Realterm.exe baud=57600 port=7 visible=1 tab=Send SENDFILE="C:\wamp64\www\Primerjalko\cena.txt"');
                             exec('echo '. round($row["Price"]).' > COM7');
-                            
+
                             if(isset($_SESSION['ID'])){
         if(mysqli_num_rows($query) > 0){
             echo "<br> Link:<a href=". $row["ProductURL"] .">". $row["Title"]. "</a>  Cena:" . $row["Price"] ." Priljubljen izdelek<br><br>";
