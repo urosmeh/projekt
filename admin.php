@@ -13,12 +13,12 @@ if(isset($_SESSION['Name']) && isset($_SESSION['Surname'])&& $_SESSION['Admin']=
     echo "<td><a href='mlacom.php'> Mlacom Scraper </a></td>";
     echo "<td><a href='markosoftscrap.php'> Markosoft Scraper </a></td>";
     echo "<td><a href='scraper_pricaraj.php'> Pričaraj Scraper </a></td>";
-
+    
     echo"</tr><tr>";
 
     echo "<td><a href='similarTitle.php'> Primerjaj nazive izdelkov </a></td>";
     echo "<td><a href='similarDescription.php'> Primerjaj opis izdelkov </a></td>";
-
+    echo "<td><a href='exportARFF.php'> Izvozi ARFF </a></td>";
     echo "</tr>";
     echo "</table>";
 }
