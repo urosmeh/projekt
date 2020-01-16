@@ -48,12 +48,10 @@ include_once "db.php";
     }
 
     echo "<br><br>Najceneje:" . "<h5><b>". $row["Price"]."€</b></h5><br><b>Opis:</b> ".$row['Description']."<br>" ;
-                            //realterm
-                          //  exec('Realterm.exe baud=57600 port=7 visible=1 tab=Send STRING1="LED_OFF"');
-                            //exec('echo '. round($row["Price"]).' > cena.txt');
-                            //exec('Realterm.exe baud=57600 port=7 visible=1 tab=Send SENDFILE="C:\wamp64\www\Primerjalko\cena.txt"');
-                            exec('echo '. round($row["Price"]).' > COM7');
 
+                            //exec('echo '. round($row["Price"]).' > cena.txt');
+                            //exec('echo '. round($row["Price"]).' > COM7');
+                            exec('SerialSend.exe "'. round($row["Price"]).'"');
                             if(isset($_SESSION['ID'])){
         if(mysqli_num_rows($query) > 0){
             echo "<br> Link:<a href=". $row["ProductURL"] .">". $row["Title"]. "</a>  Cena:" . $row["Price"] ." Priljubljen izdelek<br><br>";
