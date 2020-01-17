@@ -49,10 +49,11 @@ include_once "db.php";
 
     echo "<br><br>Najceneje:" . "<h5><b>". $row["Price"]."€</b></h5><br><b>Opis:</b> ".$row['Description']."<br>" ;
 
-                            //exec('echo '. round($row["Price"]).' > cena.txt');
-                            //exec('echo '. round($row["Price"]).' > COM7');
-                            exec('SerialSend.exe "'. round($row["Price"]).'"');
-                            if(isset($_SESSION['ID'])){
+    //exec('echo '. round($row["Price"]).' > cena.txt');//shranimo ceno v text file
+    //exec('echo '. round($row["Price"]).' > COM7');//Pošljemo ceno na Serial port 7
+    exec('SerialSend.exe "'. round($row["Price"]).'"');//Pošljemo ceno na Serial port
+
+    if(isset($_SESSION['ID'])){
         if(mysqli_num_rows($query) > 0){
             echo "<br> Link:<a href=". $row["ProductURL"] .">". $row["Title"]. "</a>  Cena:" . $row["Price"] ." Priljubljen izdelek<br><br>";
         }else{
