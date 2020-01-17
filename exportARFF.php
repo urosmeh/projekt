@@ -14,7 +14,7 @@ if(file_exists($file) == false)
     //create ARFF header
 
     $filestream = fopen($file, "w") or die();
-    echo "WUTUFUK";
+    echo "Creating ARFF header";
     fwrite($filestream, "@relation laptops\n");
     fwrite($filestream, "@attribute Znamka {DELL, HP, ACER, ASUS, LENOVO, RAZER, MICROSOFT, XMG, MSI, OTHR}\n");
     fwrite($filestream, "@attribute Cena {0-200, 201-400, 401-600, 601-800, 801-1000, 1001-1200, 1201+}\n");
@@ -22,6 +22,7 @@ if(file_exists($file) == false)
     fwrite($filestream, "@attribute RAM {4, 8, 16, 32+, ND}\n");
     fwrite($filestream, "@attribute VALUE {GOOD, AVG, BAD}\n");
     fwrite($filestream, "@data\n");
+    header("Refresh:0");
 }
 else
 {
@@ -168,6 +169,7 @@ else
         }
 
         exec("start c\prog.exe");
+
     }
 }
 
